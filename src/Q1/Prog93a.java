@@ -12,6 +12,6 @@ public class Prog93a {
         double ctax = brate * 0.03;
         double total = brate + scharge + ctax;
         double ltotal = total * 1.04;
-        System.out.println("Base Rate: " + brate + "Surcharge: " + scharge + "City Tax: " + ctax + "Pay this: ");
+        System.out.println("Base Rate: " + brate + "\nSurcharge: " + scharge + "\nCity Tax: " + ctax + "\nPay this: " + total + "\nPay this if late: " + ltotal);
     }
 }
