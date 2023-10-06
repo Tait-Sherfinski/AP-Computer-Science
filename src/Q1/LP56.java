@@ -10,8 +10,9 @@ public class LP56 {
 
         String newnum = Integer.toString(num1);
 
-        for (int lcv = 0; lcv < newnum.length(); lcv++) {
-            int num =Integer.parseInt(newnum.substring(0, 1));
+        for (int lcv = 0; lcv < 1; lcv++) {
+            int newInt = Integer.parseInt(newnum.substring(0, newnum.length()));
+            System.out.println("The sum of the digits is: " + newInt);
         }
     }
 }
