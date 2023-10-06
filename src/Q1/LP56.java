@@ -6,13 +6,15 @@ public class LP56 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter a positive integer: ");
-        int num1 = input.nextInt();
+        int num = input.nextInt();
 
-        String newnum = Integer.toString(num1);
+        int Sum = 0;
 
-        for (int lcv = 0; lcv < 1; lcv++) {
-            int newInt = Integer.parseInt(newnum.substring(0, newnum.length()));
-            System.out.println("The sum of the digits is: " + newInt);
+        while (num != 0) {
+            Sum = Sum + num % 10;
+            num = num / 10;
         }
+
+        System.out.println("The sum of the digits is: " + Sum);
     }
 }
