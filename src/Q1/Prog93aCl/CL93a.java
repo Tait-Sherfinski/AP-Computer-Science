@@ -20,11 +20,17 @@ public class CL93a {
     }
 
     public void calc() {
-        base = kilowatts * 4.75;
+        base = kilowatts * 0.0475;
         surcharge = base * 0.1;
+        citytax = base * 0.03;
+        total = base + surcharge + citytax;
+        latetotal = total * 1.04;
     }
 
 
     public double getBase() { return base; }
+    public double getcitytax() {return citytax;}
+    public double getTotal() {return total;}
+    public double getltotal() {return latetotal;}
     public double getsurcharge() {return surcharge;}
 }
