@@ -21,7 +21,9 @@ public class Prog54bCl {
         wow.Calc();
 
         int Sum = wow.getSum();
+        int average = wow.getAverage();
 
         System.out.println("The sum is: " + Sum);
+        System.out.println("The average is: " + average);
     }
 }

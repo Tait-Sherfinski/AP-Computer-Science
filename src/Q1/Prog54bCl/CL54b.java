@@ -6,18 +6,22 @@ public class CL54b {
     private int num3;
     private int num4;
     private int Sum;
+    private int average;
 
-    public CL54b(int num1, int num2, int num3, int num4) {
-        num1 = num1;
-        num2 = num2;
-        num3 = num3;
-        num4 = num4;
+    public CL54b(int Num1, int Num2, int Num3, int Num4) {
+        num1 = Num1;
+        num2 = Num2;
+        num3 = Num3;
+        num4 = Num4;
         Sum = 0;
+        average = 0;
     }
 
     public void Calc() {
         Sum = num1 + num2 + num3 + num4;
+        average = Sum / 4;
     }
 
     public int getSum() { return Sum; }
+    public int getAverage() { return average; }
 }
