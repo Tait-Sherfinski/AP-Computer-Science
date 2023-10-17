@@ -23,6 +23,6 @@ public class Prog88aCl {
         int min = wow.getMin();
 
         System.out.println("Sum: " + Sum + "\nDifference: " + diff + "\nProduct: " + prod + "\nAverage: " + average +
-        "\nAbsolute Difference: " + abs + "Max: " + max + "Min: " + min);
+        "\nAbsolute Difference: " + abs + "\nMax: " + max + "\nMin: " + min);
     }
 }

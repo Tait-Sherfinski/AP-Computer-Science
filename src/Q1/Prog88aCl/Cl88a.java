@@ -27,7 +27,7 @@ public class Cl88a {
         Sum = num1 + num2;
         diff = num1 - num2;
         product = num1 * num2;
-        average = product / 2;
+        average = Sum / 2;
         abs = Math.abs(diff);
         max = (abs + num1 + num2) / 2;
         min = max - abs;
