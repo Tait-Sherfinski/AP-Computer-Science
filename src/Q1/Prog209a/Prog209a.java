@@ -8,10 +8,16 @@ public class Prog209a {
     public static void main(String[] args) {
         try {
             Scanner input = new Scanner(new File("Langdat/prog215a.dat"));
+            int num = 0;
 
-            while (input.hasNext()) {
+            Cl209a wow = new Cl209a(num);
+            wow.calc();
 
-            }
+            int gt = wow.getGreaterThan();
+            int lt = wow.getLessThan();
+
+            System.out.println("The number of numbers less than 500 is: " + lt);
+            System.out.println("The number of numbers greater than 500 is: " + gt);
         } catch (IOException e) {
             System.out.println("Can't find data file");
         }
