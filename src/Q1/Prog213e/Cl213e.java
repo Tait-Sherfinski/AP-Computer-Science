@@ -41,5 +41,7 @@ public class Cl213e {
         }
     }
 
-    public String toString() { return String.format("Group: \tDistribution: %d\tPercent: %.2f"); }
+    public int getDistribution() { return distribution; }
+    public double getPercent() { return percent; }
+    public String getGroup() { return group; }
 }
