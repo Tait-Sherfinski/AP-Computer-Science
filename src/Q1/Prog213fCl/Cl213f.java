@@ -12,11 +12,14 @@ public class Cl213f {
     }
 
     public void calc() {
-        if (kilowatth < 2000 && kilowatth > 0) cents = 7;
-        else if (kilowatth > 2000 && kilowatth <= 10000) cents = 5;
-        else if (kilowatth > 10000) cents = 4;
-        else if (kilowatth > 0) cents = 0;
-        cost = cents * kilowatth;
+        if (kilowatth <= 2000 && kilowatth > 0) {
+            cents = 0.07;
+            cost = cents * kilowatth;
+        }
+        else if (kilowatth > 2000 && kilowatth <= 10000) {
+            cents = 0.05;
+            cost = Math.abs(2000 - kilowatth) * 0.07;
+        }
     }
 
     public double getCost() { return cost; }

@@ -15,7 +15,7 @@ public class Prog213fCl {
                 Cl213f wow = new Cl213f(kwh);
                 wow.calc();
                 double cost = wow.getCost();
-                System.out.println("Total Electricity Bill: $" + cost);
+                System.out.printf("\nTotal Electricity Bill: $%.2f", cost);
             }
         } catch (IOException e) {
             System.out.println("Can't find data file");
