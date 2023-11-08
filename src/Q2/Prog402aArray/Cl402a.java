@@ -12,4 +12,10 @@ public class Cl402a {
         myDiff = 0;
         myAvg = 0;
     }
+
+    public void setId(double Id) { myId = Id; }
+    public void setScore(double score) { myScore = score; }
+    public String toString() {
+        return String.format("ID: " + "Score: " + "Diff: %.2f", myId, myScore, myDiff);
+    }
 }
