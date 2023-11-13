@@ -32,5 +32,7 @@ public class Cl214b {
         else if (grossPay >= 300) withholding = 0.175 * grossPay;
         if (grossPay + yearToDate > 17300) FICA = 0;
         else if (grossPay + yearToDate <= 17300) FICA = 0.0605 * grossPay;
+        else if (yearToDate <= 17300 && yearToDate + grossPay > 17300) FICA = (17300 - (yearToDate + grossPay));
+        netPay = (grossPay - FICA) - withholding;
     }
 }
