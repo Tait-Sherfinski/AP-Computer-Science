@@ -1,4 +1,4 @@
-package Q2;
+package Q2.BigArray2;
 
 import java.io.File;
 import java.io.IOException;
@@ -75,6 +75,39 @@ public class BigArray2 {
             Cat tempCat = cats[1];
             cats[1] = cats[3];
             cats[3] = tempCat;
+
+            // 10
+            System.out.println("\n10. Current cat names are: ");
+            for (Cat cat : cats) {
+                if ( cat != null) System.out.print(cat.getName() + "\t");
+            }
+            System.out.println();
+
+            // 11
+            int i = 0;
+            while (i < numCats) {
+                if (cats[i].getCost() < 26) {
+                    for (int j = i; j < numCats - 1; j++)
+                        cats[j] = cats[j + 1];
+                    numCats--;
+                } else {
+                    i++;
+                }
+            }
+
+            System.out.println("\n11. The cats costing $26 or more actually cost: ");
+            for (int lcv = 0; lcv < numCats; lcv++)
+                System.out.print(cats[lcv].getCost());
+            System.out.println();
+
+            // 12
+            System.out.println("\n12. The cats being put on a diet are: ");
+            for (int lcv = 0; lcv < numCats; lcv++) {
+                Cat cat = cats[lcv];
+                if (cat.getWeight() > 15)
+                    System.out.println(cat.getName() + "\t");
+            }
+            System.out.println();
 
             while (input.hasNext()) {
 
