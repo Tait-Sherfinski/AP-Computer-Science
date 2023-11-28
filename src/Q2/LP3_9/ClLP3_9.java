@@ -7,8 +7,8 @@ public class ClLP3_9 {
     public int yearNow;
     public int monthNow;
     public int dayNow;
-    public double aliveDays;
-    public double sleptHours;
+    public int aliveDays;
+    public int sleptHours;
 
     public ClLP3_9(int year, int month, int day, int cYear, int cMonth, int cDay) {
         myYear = year;
@@ -22,7 +22,10 @@ public class ClLP3_9 {
     }
 
     public void calc() {
-        aliveDays = (yearNow - myYear) * 365.25 + (monthNow - myMonth) * 365.25 / 12;
+        aliveDays = (yearNow - myYear) * 365 + (monthNow - myMonth) * 365 / 12;
         sleptHours = aliveDays * 8;
     }
+
+    public double getAliveDays() { return aliveDays; }
+    public double getSleptHours() { return sleptHours; }
 }
