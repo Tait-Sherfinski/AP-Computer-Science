@@ -22,7 +22,7 @@ public class ClLP3_9 {
     }
 
     public void calc() {
-        aliveDays = (yearNow - myYear) * 365 + (monthNow - myMonth) * 365 / 12;
+        aliveDays = (yearNow - myYear) * 365 + (Math.abs(myMonth - monthNow)) * 30 + (Math.abs(myDay - dayNow));
         sleptHours = aliveDays * 8;
     }
 
