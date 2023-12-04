@@ -7,11 +7,11 @@ public class ArrayListTest {
     Arraylist<Integer> list = new ArrayList<Integer>();
 
     for (int lcv = 0; lcv < 100; lcv++) {
-      int rand = (int)(Math.random() * 100) + + 1;
+      int rand = (int) (Math.random() * 100) + +1;
       list.add(rand);
     }
 
-    for (lcv = 0; lcv < list.size(); lcv+=2) 
+    for (lcv = 0; lcv < list.size(); lcv += 2)
       System.out.print(list.get(lcv) + " ");
     System.out.println();
 
