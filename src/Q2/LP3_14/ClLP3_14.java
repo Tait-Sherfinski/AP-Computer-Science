@@ -11,7 +11,7 @@ public class ClLP3_14 {
   private int mVotes;
   private int total;
 
-  public ClLp3_14(int aNY, int mNY, int aNJ, int mNJ, int aC, int mC) {
+  public ClLP3_14(int aNY, int mNY, int aNJ, int mNJ, int aC, int mC) {
     aNewYork = aNY;
     mNewYork = mNY;
     aNewJersey = aNJ;
@@ -29,6 +29,15 @@ public class ClLP3_14 {
     total = aVotes + mVotes;
   }
 
-  public int getAVotes() { return aVotes; }
-  public int getMVotes() { return mVotes; }
-  public int getTotal() { return total; }
+  public int getAVotes() {
+    return aVotes;
+  }
+
+  public int getMVotes() {
+    return mVotes;
+  }
+
+  public int getTotal() {
+    return total;
+  }
+}

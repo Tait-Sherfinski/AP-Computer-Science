@@ -8,4 +8,17 @@ public class Bank {
     }
 
     public double getAmount() { return myAmount; }
+
+    public void calc(Transaction thing) {
+        if (thing.getCode().equals("D")) {
+            myAmount += thing.getAmount();
+        } else if (thing.getCode().equals("S")) {
+            myAmount -= thing.getAmount();
+        } else if (thing.getCode().equals("C")) {
+            if (thing.getAmount() > this.getAmount())
+                myAmount = this.getAmount() - 10;
+            else
+                myAmount -= thing.getAmount();
+        }
+    }
 }
