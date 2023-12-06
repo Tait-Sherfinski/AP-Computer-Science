@@ -21,13 +21,32 @@ public class LP3_14 {
     System.out.print("Martinez: ");
     int mC = input.nextInt();
 
-    ClLP3_14 wow = new ClLP3_14();
+    ClLP3_14 wow = new ClLP3_14(aNY, mNY, aNJ, mNJ, aC, mC);
     wow.calc();
 
-    int aVotes = wow.getAVotes();
-    int mVotes = wow.getMVotes();
-    int total = wow.getTotal();
+    double aVotes = wow.getAVotes();
+    double mVotes = wow.getMVotes();
+    double total = wow.getTotal();
 
-    System.out.println("Candidates\t\tVotes\tPercentage\nAwbrey\t\t\t" + aVotes + "\t" + aVotes / total * 100 + "%\nMartinez\t\t" + mVotes + "\t" + mVotes);
+    System.out.println("Candidates\t\tVotes\tPercentage");
+    System.out.println("Awbrey\t\t\t" + aVotes + "\t" + (aVotes / total) * 100);
+    System.out.println("Martinez\t\t" + mVotes + "\t" + (mVotes / total) * 100);
+    System.out.println("Total: " + total);
   }
 }
+
+// Election Results for New York:
+//Awbrey: 314159
+//Martinez: 271860
+//Election Results for New Jersey
+//Awbrey: 89008
+//Martinez: 121032
+//Election Results for Connecticut
+//Awbrey: 213451
+//Martinez: 231034
+//Candidates		Votes	Percentage
+//Awbrey			616618.0	49.70545180179018
+//Martinez		623926.0	50.294548198209824
+//Total: 1240544.0
+//
+//Process finished with exit code 0

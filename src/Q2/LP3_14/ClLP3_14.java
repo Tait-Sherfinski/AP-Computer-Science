@@ -1,15 +1,15 @@
 package Q2.LP3_14;
 
 public class ClLP3_14 {
-  private int aNewYork;
-  private int mNewYork;
-  private int aNewJersey;
-  private int mNewJersey;
-  private int aConnecticut;
-  private int mConnecticut;
-  private int aVotes;
-  private int mVotes;
-  private int total;
+  private double aNewYork;
+  private double mNewYork;
+  private double aNewJersey;
+  private double mNewJersey;
+  private double aConnecticut;
+  private double mConnecticut;
+  private double aVotes;
+  private double mVotes;
+  private double total;
 
   public ClLP3_14(int aNY, int mNY, int aNJ, int mNJ, int aC, int mC) {
     aNewYork = aNY;
@@ -29,15 +29,15 @@ public class ClLP3_14 {
     total = aVotes + mVotes;
   }
 
-  public int getAVotes() {
+  public double getAVotes() {
     return aVotes;
   }
 
-  public int getMVotes() {
+  public double getMVotes() {
     return mVotes;
   }
 
-  public int getTotal() {
+  public double getTotal() {
     return total;
   }
 }
