@@ -47,11 +47,11 @@ public class IntArrayList {
     }
 
     public int get(int index) { return myArray[index]; }
-    public void set(int index, int num) { index = num; }
+    public void set(int index, int num) { index += num; }
     public int size() { return mySize; }
     public int[] toArray() { return myArray; }
     public int indexOf(int num) {
-        for (int lcv = 0; lcv < mySize; lcv--) {
+        for (int lcv = 0; lcv < mySize; lcv++) {
             return num;
         } return -1;
     }
