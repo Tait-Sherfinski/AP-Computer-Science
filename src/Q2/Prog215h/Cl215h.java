@@ -20,8 +20,17 @@ public class Cl215h {
     }
 
     public void calc() {
-        for (int nums : cont1) {
-
+        for (int lcv = 0; lcv < cont1.length; lcv++) {
+            double sum = cont1[lcv];
+            c1Avg = sum / cont1.length;
+        }
+        for (int lcv = 0; lcv < cont2.length; lcv++) {
+            double sum = cont2[lcv];
+            c2Avg = sum / cont2.length;
+        }
+        for (int lcv = 0; lcv < cont3.length; lcv++) {
+            double sum = cont3[lcv];
+            c3Avg = sum / cont3.length;
         }
     }
 }
