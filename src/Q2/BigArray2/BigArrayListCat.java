@@ -73,7 +73,16 @@ public class BigArrayListCat {
             System.out.println();
 
             // 11
-
+            for (int lcv = 0; lcv < cats.size(); lcv++) {
+                if (cats.get(lcv).getCost() < 26) {
+                    cats.remove(lcv);
+                    lcv--;
+                }
+            }
+            System.out.println("\n11. The cost of the remaining cats are: ");
+            for (Cat c : cats)
+                System.out.print(c.getCost() + " ");
+            System.out.println();
 
             // 12
             System.out.println("\n12. The cats being put on a diet are: ");
@@ -89,3 +98,35 @@ public class BigArrayListCat {
         }
     }
 }
+
+// 1. All the cats:
+//Name	Weight	Age	Cost
+//Inky	15.690000	2	35.790000
+//Panda	14.300000	6	15.030000
+//Rascal	21.100000	21	0.000000
+//Blacky	13.990000	3	26.890000
+//Taffy	24.500000	10	56.890000
+//Toby	17.200000	10	37.570000
+//The thrid cat is named: Rascal
+//
+//3. The updated weight is: 27.2
+//The updated list is:
+//Name	Weight	Age	Cost
+//Inky	15.690000	2	35.790000
+//Angel	3.600000	1	25.990000
+//Panda	14.300000	6	15.030000
+//Blacky	13.990000	3	26.890000
+//Taffy	24.500000	10	56.890000
+//Toby	27.200000	10	37.570000
+//Gimpy	14.300000	10	29.990000
+//
+//10. the current cat name are:
+//Inky	Blacky	Sugar	Angel	Taffy	Toby	Gimpy	Panda
+//
+//11. The cost of the remaining cats are:
+//35.79 26.89 33.25 56.89 37.57 29.99
+//
+//12. The cats being put on a diet are:
+//Inky	Sugar	Taffy	Toby
+//
+//Process finished with exit code 0
