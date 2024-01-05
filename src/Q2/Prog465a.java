@@ -22,8 +22,20 @@ public class Prog465a {
                 }
             }
 
-            int[][] largeNums = new int[4][4];
-
+            System.out.println("Matrix 1");
+            for (int[] row : mat1) {
+                for (int num : row) {
+                    System.out.print(num + " ");
+                }
+                System.out.println();
+            }
+            System.out.println("Matrix 2");
+            for (int[] row2 : mat2) {
+                for (int num2 : row2) {
+                    System.out.print(num2 + " ");
+                }
+                System.out.println();
+            }
 
         } catch (IOException e) {
             System.out.println("Can't find data file");
