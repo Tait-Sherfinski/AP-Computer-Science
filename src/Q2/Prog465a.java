@@ -22,6 +22,23 @@ public class Prog465a {
                 }
             }
 
+            int[][] largeNums = new int[4][4];
+            for (int r = 0; r < largeNums.length; r++) {
+                for (int c = 0; c < largeNums[0].length; c++) {
+                    for (int[] row : mat1) {
+                        for (int n : row) {
+                            for (int[] row2 : mat2) {
+                                for (int n1 : row2) {
+                                    if (n > n1) {
+                                        largeNums[1][1] += n;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
             System.out.println("Matrix 1");
             for (int[] row : mat1) {
                 for (int num : row) {
