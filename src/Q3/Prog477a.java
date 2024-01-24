@@ -16,11 +16,13 @@ public class Prog477a {
                 }
             }
 
+            String letterGrade = "";
             for (int[] col : mat) {
                 for (int j : col) {
-
+                    if (j == 1) letterGrade = "a";
                 }
             }
+            System.out.println(letterGrade);
 
             for (int[] row : mat) {
                 for (int n : row)
