@@ -37,25 +37,27 @@ public class Prog702p {
 
             double total = 0;
             int count = 0;
-            int totalSteps = 0;
-            String large = "";
-            String small = "";
+            double totalSteps = 0;
+            int wCount = 0;
+
 
             for (Animal x : list) {
                 if (x instanceof Hiccas) {
                     total += ((Hiccas)x).getFurWorth();
                     count++;
                 }
-                if (x instanceof Wallies)
+                if (x instanceof Wallies) {
                     totalSteps += ((Wallies)x).getSteps();
+                    wCount++;
+                }
                 if (x instanceof Beepers) {
                     String word = ((Beepers)x).getSpecialWord();
-                    if (word.length() > large.length())
-                        large = word;
-                    if (word.length() < small.length())
-                        small = word;
                 }
             }
+
+            System.out.printf("The average value of the hicca fur is: %.2f\n", total/count);
+            System.out.printf("The average number of steps taken by the wallies is: %.1f\n", totalSteps/wCount);
+            System.out.println("");
 
 
 
