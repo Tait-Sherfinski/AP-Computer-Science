@@ -39,6 +39,8 @@ public class Prog702p {
             int count = 0;
             double totalSteps = 0;
             int wCount = 0;
+            int numWords = 0;
+            int wordLetters = 0;
 
 
             for (Animal x : list) {
@@ -52,12 +54,16 @@ public class Prog702p {
                 }
                 if (x instanceof Beepers) {
                     String word = ((Beepers)x).getSpecialWord();
+                    numWords++;
+                    for (int i = 0; i < numWords; i++) {
+                        wordLetters += word.length();
+                    }
                 }
             }
 
             System.out.printf("The average value of the hicca fur is: %.2f\n", total/count);
             System.out.printf("The average number of steps taken by the wallies is: %.1f\n", totalSteps/wCount);
-            System.out.println("");
+            System.out.println("The average size of the Beepers word is: " + wordLetters/numWords);
 
 
 
