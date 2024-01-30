@@ -65,6 +65,12 @@ public class Prog702p {
                 }
                 if (x instanceof Beepers) {
                     String word = ((Beepers)x).getSpecialWord();
+                    List<String> words = new ArrayList<String>();
+                    words.add(word);
+                    String alph = "abcdefghijklmnopqrstuvwxyz";
+                    for (int i = 0; i < alph.length(); i++) {
+                        System.out.println("i");
+                    }
                     numWords++;
                     beeperCount++;
                     for (int i = 0; i < numWords; i++) {
@@ -72,6 +78,7 @@ public class Prog702p {
                     }
                 }
             }
+
 
             System.out.println("\nThe fur sum is: $" + total);
             System.out.println("Num Hiccas: " + hiccaCount);
