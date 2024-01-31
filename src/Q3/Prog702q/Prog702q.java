@@ -15,7 +15,7 @@ public class Prog702q {
             Scanner input = new Scanner(new File("Langdat/prog702q.txt"));
             List<Vehicle> list = new ArrayList<Vehicle>();
 
-                int num = input.nextInt();
+            int num = input.nextInt();
                 String n = input.next();
                 int t = input.nextInt();
                 if (num == 1) {
@@ -47,31 +47,37 @@ public class Prog702q {
             int truckVal = 0;
             int busVal = 0;
             int totalWorth = 0;
+            String busWord = "";
 
             for (Vehicle x : list) {
                 if (x instanceof Cars) {
                     totCarVal += ((Cars)x).getWorth();
+                    carTires = ((Cars)x).getTires();
                     totalWorth += totCarVal;
                     numVehicles++;
-                    carTires++;
                 }
                 if (x instanceof Trucks) {
                     truckVal += ((Trucks)x).getValue();
+                    truckTires = ((Trucks)x).getTires();
                     totalWorth += truckVal;
                     numVehicles++;
-                    truckTires++;
                 }
                 if (x instanceof Buses) {
                     busVal += ((Buses)x).getValue();
+                    busTires = ((Buses)x).getTires();
+                    busWord = ((Buses)x).getCity();
                     totalWorth += busVal;
                     numVehicles++;
-                    busTires++;
                 }
             }
 
             System.out.println("The total number of vehicles is: " + numVehicles);
             System.out.println("The total value of the cars is: " + totCarVal);
             System.out.println("The total that all of the vehicles are worth is: " + totalWorth);
+            System.out.println("The total number of car tires is: "  + carTires);
+            System.out.println("The total number of truck tires is: " + truckTires);
+            System.out.println("The total number of bus tires is: " + busTires);
+            System.out.println("The bus homecity with the most characters is: " + busWord);
 
         } catch (IOException e) {
             System.out.println("Can't find data file");
