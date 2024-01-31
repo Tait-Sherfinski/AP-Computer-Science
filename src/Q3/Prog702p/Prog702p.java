@@ -65,11 +65,10 @@ public class Prog702p {
                 }
                 if (x instanceof Beepers) {
                     String word = ((Beepers)x).getSpecialWord();
-                    List<String> words = new ArrayList<String>();
-                    words.add(word);
+                    int[] freqs = new int[26];
                     String alph = "abcdefghijklmnopqrstuvwxyz";
-                    for (int i = 0; i < alph.length(); i++) {
-                        System.out.println("i");
+                    for (int i = 0; i < freqs.length; i++) {
+                        
                     }
                     numWords++;
                     beeperCount++;

@@ -15,8 +15,7 @@ public class Prog702q {
             Scanner input = new Scanner(new File("Langdat/prog702q.txt"));
             List<Vehicle> list = new ArrayList<Vehicle>();
 
-            int num = input.nextInt();
-            while (num > 0) {
+                int num = input.nextInt();
                 String n = input.next();
                 int t = input.nextInt();
                 if (num == 1) {
@@ -37,30 +36,42 @@ public class Prog702q {
                     Vehicle i = new Buses(n, t, v, c);
                     list.add(i);
                 }
-                num = input.nextInt();
-            }
+
+
 
             int numVehicles = 0;
             int totCarVal = 0;
             int carTires = 0;
             int truckTires = 0;
+            int busTires = 0;
             int truckVal = 0;
+            int busVal = 0;
+            int totalWorth = 0;
 
             for (Vehicle x : list) {
                 if (x instanceof Cars) {
                     totCarVal += ((Cars)x).getWorth();
+                    totalWorth += totCarVal;
                     numVehicles++;
                     carTires++;
                 }
                 if (x instanceof Trucks) {
                     truckVal += ((Trucks)x).getValue();
+                    totalWorth += truckVal;
                     numVehicles++;
                     truckTires++;
                 }
+                if (x instanceof Buses) {
+                    busVal += ((Buses)x).getValue();
+                    totalWorth += busVal;
+                    numVehicles++;
+                    busTires++;
+                }
             }
 
-            System.out.println("The total number of vehicles is: ");
+            System.out.println("The total number of vehicles is: " + numVehicles);
             System.out.println("The total value of the cars is: " + totCarVal);
+            System.out.println("The total that all of the vehicles are worth is: " + totalWorth);
 
         } catch (IOException e) {
             System.out.println("Can't find data file");
