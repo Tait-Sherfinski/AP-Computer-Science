@@ -15,7 +15,7 @@ public class Prog465h {
                 for (int col = 0; col < mat[0].length; col++) {
                     mat[row][col] = input.nextInt();
                     if (mat[row][col] > 0) {
-                        System.out.println(row);
+                        System.out.println();
                     }
                 }
             }
@@ -33,7 +33,7 @@ public class Prog465h {
                     if (j < 1) count++;
                 }
             } if (count > 25) System.out.println("The original array is sparse");
-            else if (count <= 15) System.out.println("The original array is abundant");
+            else if (count == 14) System.out.println("The original array is abundant");
             else System.out.println("The original array is equally efficient");
 
 
@@ -58,7 +58,7 @@ public class Prog465h {
                     if (j < 1) count2++;
                 }
             } if (count2 > 25) System.out.println("The original array is sparse");
-            else if (count2 <= 15) System.out.println("The original array is abundant");
+            else if (count2 == 14) System.out.println("The original array is abundant");
             else System.out.println("The original array is equally efficient");
 
 
@@ -83,7 +83,7 @@ public class Prog465h {
                     if (j < 1) count3++;
                 }
             } if (count3 > 25) System.out.println("The original array is sparse");
-            else if (count3 <= 15) System.out.println("The original array is abundant");
+            else if (count3 == 14) System.out.println("The original array is abundant");
             else System.out.println("The original array is equally efficient");
 
         } catch (IOException e) {

@@ -16,6 +16,7 @@ public class Prog702q {
             List<Vehicle> list = new ArrayList<Vehicle>();
 
             int num = input.nextInt();
+            if (num >= 1) {
                 String n = input.next();
                 int t = input.nextInt();
                 if (num == 1) {
@@ -36,6 +37,9 @@ public class Prog702q {
                     Vehicle i = new Buses(n, t, v, c);
                     list.add(i);
                 }
+                num = input.nextInt();
+            }
+
 
 
 
