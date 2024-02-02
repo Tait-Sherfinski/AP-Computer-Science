@@ -8,27 +8,32 @@ public class Prog477a {
     public static void main(String[] args) {
         try {
             Scanner input = new Scanner(new File("Langdat/prog477a.dat"));
+            int num = input.nextInt();
+            int gradeNum = input.nextInt();
 
-            int[][] mat = new int[4][5];
-            for (int row = 0; row < mat.length; row++) {
-                for (int col = 0; col < mat[0].length; col++) {
-                    mat[row][col] = input.nextInt();
+            int mCount = 0;
+            int fCount = 0;
+            int fA = 0;
+            int fB = 0;
+            int fC = 0;
+            int fD = 0;
+            int fF = 0;
+            int mA = 0;
+            int mB = 0;
+            int mC = 0;
+            int mD = 0;
+            int mF = 0;
+
+
+            for (int i = 0; i < 33+1; i++) {
+                if (num == 1) {
+                    if (gradeNum == 1) mA++;
+                    else if (gradeNum == 2) mB++;
                 }
             }
 
-            String letterGrade = "";
-            for (int[] col : mat) {
-                for (int j : col) {
-                    if (j == 1) letterGrade = "a";
-                }
-            }
-            System.out.println(letterGrade);
+            System.out.println(mA);
 
-            for (int[] row : mat) {
-                for (int n : row)
-                    System.out.print(n + "\t");
-                System.out.println();
-            }
 
         } catch (IOException e) {
             System.out.println("Can't find data file");
