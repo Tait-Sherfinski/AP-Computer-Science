@@ -11,7 +11,7 @@ public class Prog901a {
     }
 
     public static String reverseString(String s) {
-        s = "i";
+        s = "abcdefghijklmnopqrstuvwxyz";
         for (int i = s.length(); i > 0; i--) {
             for (int j = 0; j < s.length(); j++) {
                 int count = 0;
@@ -27,6 +27,8 @@ public class Prog901a {
         try {
             Scanner input = new Scanner(new File("Langdat/prog512h.dat"));
 
+            String something = input.nextLine();
+            System.out.println(something);
         } catch (IOException e) {
             System.out.println("Can't find data file");
         }
