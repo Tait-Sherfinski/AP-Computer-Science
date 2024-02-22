@@ -12,6 +12,7 @@ public class Prog505w {
             List<Animal> animals = new ArrayList<Animal>();
 
             int cWeight = 0;
+            int foodEaten = 0;
 
             int hay = input.nextInt();
             double hayCost = input.nextDouble();
@@ -29,6 +30,8 @@ public class Prog505w {
                     int cornEaten = input.nextInt();
                     Cow wow = new Cow(name, weight, milk, hayEaten, cornEaten);
                     animals.add(wow);
+                    foodEaten += cornEaten;
+                    foodEaten += hayEaten;
                     hay -= hayEaten;
                     corn -= cornEaten;
                     cWeight += weight;
@@ -47,11 +50,17 @@ public class Prog505w {
                     double rideCost = input.nextDouble();
                     Horse fred = new Horse(name, weight, cornEaten, hayEaten, rides, rideCost);
                     animals.add(fred);
+                    foodEaten += cornEaten;
+                    foodEaten += hayEaten;
                     hay -= hayEaten;
                     corn -= cornEaten;
                     cWeight += weight;
                 }
             }
+
+            if (hay + corn - foodEaten > 0) {
+                System.out.println("There is enough food to feed all animals");
+            } else System.out.println("There is not enough food to feed all animals");
 
             System.out.println(cWeight);
 
