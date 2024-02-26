@@ -13,6 +13,8 @@ public class Prog505w {
 
             int cWeight = 0;
             int foodEaten = 0;
+            double cowRev = 0;
+            double horseRev = 0;
 
             int hay = input.nextInt();
             double hayCost = input.nextDouble();
@@ -35,6 +37,7 @@ public class Prog505w {
                     hay -= hayEaten;
                     corn -= cornEaten;
                     cWeight += weight;
+                    cowRev += (milk * 0.20);
                 }
             }
 
@@ -55,16 +58,18 @@ public class Prog505w {
                     hay -= hayEaten;
                     corn -= cornEaten;
                     cWeight += weight;
+                    horseRev += (rides * rideCost);
                 }
             }
+
+            double totalRev = (horseRev + cowRev - (cornCost + hayCost));
+            System.out.println("The income of the day is " + totalRev);
 
             if (hay + corn - foodEaten > 0) {
                 System.out.println("There is enough food to feed all animals");
             } else System.out.println("There is not enough food to feed all animals");
 
-            System.out.println(cWeight);
-
-            // TODO: report income of the day, if theres enough food to feed all
+            System.out.println("The total weight of all the animals is: " + cWeight);
 
 
             double minHorseValue = Double.MAX_VALUE;
@@ -91,7 +96,7 @@ public class Prog505w {
                 }
             }
 
-            System.out.println(animals.get(maxCowIndex).getName());
+            System.out.println("The cow that makes the most money is: " + animals.get(maxCowIndex).getName());
             System.out.printf("Horse %s makes the least money\n", animals.get(minHorseIndex).getName());
 
         } catch (IOException e) {
