@@ -9,9 +9,11 @@ public class Prog505t {
         try {
             Scanner input = new Scanner(new File("Langdat/prog505t.dat"));
 
-            ArrayList<Cow> cow = new ArrayList<Cow>();
-            ArrayList<Horse> horse = new ArrayList<Horse>();
+            List<Cow1> cow = new ArrayList<Cow1>();
+            List<Horse1> horse = new ArrayList<Horse1>();
 
+            double hIncome = 0;
+            double cIncome = 0;
 
             int hayBales = input.nextInt();
             double hayCost = input.nextDouble();
@@ -24,6 +26,9 @@ public class Prog505t {
                 int milkLBs = input.nextInt();
                 int hayEaten = input.nextInt();
                 int cornEaten = input.nextInt();
+                cIncome = milkLBs * 0.20;
+                Cow1 wow = new Cow1(weight, milkLBs, cornEaten, hayEaten);
+                cow.add(wow);
                 hayBales -= hayEaten;
                 cornCobs -= cornEaten;
             }
@@ -35,9 +40,17 @@ public class Prog505t {
                 int cornEaten = input.nextInt();
                 int rides = input.nextInt();
                 double rideCost = input.nextDouble();
+                hIncome = rides * rideCost;
+                Horse1 fred = new Horse1(weight, cornEaten, hayEaten, rides, rideCost);
+                horse.add(fred);
                 hayBales -= hayEaten;
                 cornCobs -= cornEaten;
             }
+
+            double totalIncome = cIncome + hIncome;
+
+            System.out.println(totalIncome);
+            System.out.println("The number of cows and horses is: " + (cows + horses));
 
 
         } catch (IOException e) {
