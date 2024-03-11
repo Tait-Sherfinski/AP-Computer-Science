@@ -86,6 +86,8 @@ public class Prog505t {
 
             System.out.println("The number of cows and horses is: " + (cows + horses));
 
+            System.out.println(animals.get(0).getWeight());
+
 
         } catch (IOException e) {
             System.out.println("Can't find data file");
