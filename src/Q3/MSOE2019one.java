@@ -13,7 +13,7 @@ public class MSOE2019one {
         int count = 0;
 
         for (int i = 0; i < line.length(); i++) {
-            if (line.substring(i, i+1).equals(two.substring(0, 1))) count++;
+            if (line.substring(i).equals(two.substring(0, 1))) count++;
         }
         System.out.println(count);
     }
