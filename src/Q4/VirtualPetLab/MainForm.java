@@ -81,7 +81,7 @@ public class MainForm extends JFrame {
     public void updatePetList() {
         petSelectorComboBox.removeAllItems();  // Clear existing items
         petManager.getPets();
-
+        // petSelectorComboBox.add();
     }
 
     /* ========== DO NOT MODIFY BELOW ========== */
