@@ -6,7 +6,17 @@ public class Transaction {
     private String checkoutDate; // Simple date format
     private String returnDate; // Optional, can be null if not returned yet
 
-    // TODO: Implement constructor (isbn, patronId, checkoutDate); set returnDate to null by default
+    public Transaction(String myIsbn, String myPatronId, String myCheckoutDate) {
+        isbn = myIsbn;
+        patronId = myPatronId;
+        checkoutDate = myCheckoutDate;
+        returnDate = null;
+    }
+
+    public void setIsbn(String placeholder) {
+        isbn = placeholder;
+    }
+    public String getIsbn() { return isbn}
 
     // TODO: Implement getters and setters
 
