@@ -16,7 +16,7 @@ public class Transaction {
     public void setIsbn(String placeholder) {
         isbn = placeholder;
     }
-    public String getIsbn() { return isbn}
+    public String getIsbn() { return isbn; }
 
     // TODO: Implement getters and setters
 
