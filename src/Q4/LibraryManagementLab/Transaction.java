@@ -13,12 +13,16 @@ public class Transaction {
         returnDate = null;
     }
 
-    public void setIsbn(String placeholder) {
-        isbn = placeholder;
+    public void setIsbn(String newIsbn) {
+        isbn = newIsbn;
     }
     public String getIsbn() { return isbn; }
 
-    // TODO: Implement getters and setters
+    public void setPatronId(String newId) {patronId = newId; }
+    public String getPatronId() { return patronId; }
+
+    public void setCheckoutDate(String newDate) {checkoutDate = newDate; }
+    public String getCheckoutDate() { return checkoutDate; }
 
     @Override
     public String toString() {
