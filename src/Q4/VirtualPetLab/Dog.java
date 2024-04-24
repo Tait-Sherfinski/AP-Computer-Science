@@ -35,7 +35,7 @@ public class Dog extends Pet{
     @Override
     public void sleep() {
         if (this.getEnergy() < 100) setEnergy(100);
-        setHunger(50);
-        setHappiness(50);
+        setHunger(this.getHunger() - 10);
+        setHappiness(this.getHappiness() + 10);
     }
 }
