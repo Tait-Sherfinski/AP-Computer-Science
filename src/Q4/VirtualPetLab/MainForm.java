@@ -66,6 +66,8 @@ public class MainForm extends JFrame {
                 // Make sure the action event isn't triggered by the removeAllItems() call
                 if (petSelectorComboBox.getSelectedIndex() == -1) return;
 
+                petSelectorComboBox.getSelectedIndex();
+
                 // TODO: Implement pet selection change
                 // 1. Grab the current pet from the petManager using petSelectorComboBox.getSelectedIndex()
                 // 2. Update statusLabel with the selected pet's status
