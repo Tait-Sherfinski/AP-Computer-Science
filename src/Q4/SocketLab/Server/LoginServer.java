@@ -10,6 +10,8 @@ package Q4.SocketLab.Server;
 	Revised by:
 
  */
+import Q4.SocketLab.CaesarCipher;
+
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -25,6 +27,7 @@ public class LoginServer {
     public static void main(String[] args) throws Exception{
         final int PORT = 33235; //port number for this server application
         //setup welcome socket
+        final int ENC_OFFSET = 5;
         ServerSocket welcomeSocket = new ServerSocket(PORT);
         System.out.println("Now listening at " + welcomeSocket.getLocalSocketAddress());
 
@@ -48,7 +51,13 @@ public class LoginServer {
                 //parse protocol message
                 username = parsedProtocolMessage[1];
                 String password = parsedProtocolMessage[2];
+
+                // Decrypt login credentials
+                username = CaesarCipher.decrypt(username, ENC_OFFSET);
+                password = CaesarCipher.decrypt(password, ENC_OFFSET);
+
                 System.out.println("User Name: " + username + ", password: " + password);
+
 
                 //check to see if username/password matches
                 boolean match = checkUsernamePassword(username, password);
@@ -61,7 +70,6 @@ public class LoginServer {
                     outgoingProtocolMessage = "loginResponse;success";
                     System.out.println("Response to client:"+outgoingProtocolMessage);
                 }
-                /**TODO: Encrypt the message before sending out *****/
                 System.out.println("Response to client:"+outgoingProtocolMessage);
                 outToClient.writeBytes(outgoingProtocolMessage + "\n");
             }//end of if(loginRequest) block
