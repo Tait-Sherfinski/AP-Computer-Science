@@ -71,6 +71,7 @@ public class Prog7301m {
         var model = new MultiLayerPerceptron(new int[]{N_INPUTS, 100, N_CLASSES}, 0.1, new Activations.Sigmoid());
         model.train(X_train, y_train, 10);
         System.out.println("Final accuracy: " + model.accuracy(X_test, y_test));
+        model.saveModel("Langdat/prog7301m_model.ser");
 
         int index = (int)(Math.random() * X_test.length);
         double[] X_val = X_test[index];
